@@ -1,0 +1,405 @@
+% A Sample exam in Persian language
+% By Hamid Reza Shahriari (linkedin.com/in/hrshahriari)
+
+% You can find more details about exam package here:
+%		https://www.overleaf.com/learn/latex/Typesetting_exams_in_LaTeX
+%		https://www.nic.funet.fi/pub/TeX/CTAN/macros/latex/contrib/exam/examdoc.pdf
+
+%\documentclass[answers]{exam}		% Use to show answers
+\documentclass{exam}
+\pointname{نمره}
+\boxedpoints
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{listings}		% for listing SQL code
+\lstset{language=SQL, basicstyle=\sffamily, stringstyle=\ttfamily, columns=fullflexible}  % Change it for other programming languages
+
+\usepackage{booktabs}
+
+\usepackage{fancybox}
+\usepackage{color}
+\usepackage{relsize}
+\usepackage{newlfont}
+
+%\renewcommand{\solutiontitle}{\hfill\textbf{\rl{ پاسخ:}}\par}
+%\SolutionEmphasis{}
+%\SolutionEmphasis{\itshape\Large}
+
+%\printanswers		% Force to show answers
+
+\shadedsolutions
+\definecolor{SolutionColor}{rgb}{0.8,0.9,1}
+
+% A command to hide a block or commnet out
+\newcommand{\hide}[1]{}
+
+\usepackage{xepersian}
+%\settextfont{XB Niloofar}
+\settextfont{Calibri}		% Persian text font
+
+\newcommand{\thecourse}{اصول طراحی پایگاه داده}  % Specify the course title
+\newcommand{\examtitle}{آزمونک اول}  					% Specify the exam title
+\newcommand{\theteacher}{حمیدرضا شهریاری} 		% Specify the teacher name
+\newcommand{\examtime}{60 دقیقه} 						% Specify the exam time limit
+
+\newcommand{\lsf}[1]{\lr{\textsf{#1}}}					% Use \lsf{english text} for English text in letf-to-right and serif font family
+\newcommand{\TF}{\dotfill  $\bigcirc$ درست $\bigcirc$ نادرست}	% True/False questions
+
+\firstpageheader{}{بسمه تعالی}{}
+
+\setlength{\topmargin}{-2cm}
+\setlength{\textheight}{26cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\runningheadrule
+\runningheader{\thecourse}{}{\examtitle}
+\footer{\iflastpage{انتهای آزمون} }
+{صفحه \thepage\ از \numpages}{}
+
+\SolutionEmphasis{\itshape}
+%\printanswers
+
+\shadedsolutions
+\definecolor{SolutionColor}{rgb}{0.8,0.9,1}
+
+\begin{document}
+			
+\shadowbox{
+			\begin{minipage}{\linewidth}
+			\centering
+						    {\huge \thecourse \\}
+						     \examtitle - زمان: \examtime \\
+						    مدرس:  \theteacher \\
+						    \today
+			\end{minipage}		
+}
+
+\makebox[0.5\textwidth]{نام:\enspace\dotfill} 
+\makebox[0.5\textwidth]{شماره دانشجویی:\enspace\dotfill}
+
+\pointname{نمره}
+\hqword{پرسش}
+\hpword{بارم}
+\hsword{نمره}
+\htword{جمع}
+
+\addpoints
+\begin{center}
+\gradetable[h][questions]
+\end{center}
+
+\textbf{توجه:}
+\begin{itemize}
+\item آزمون کتاب و جزوه بسته است.
+\item	استفاده از هر گونه وسایل محاسباتی و  ارتباطی (مانند لپ تاپ، موبایل، تبلت و غیره) ممنوع است.
+%\item ابتدا همه سوالها را مرور نمایید و اگر ابهامی در سوال وجود دارد، در همان 10 دقیقه اول بپرسید.
+\item سوالها را با همان فرضیات داده شده حل کنید. در صورتی که فرض جدیدی لازم است، صریحاً بنویسید.
+\end{itemize}
+
+\rule{\textwidth}{2pt}
+
+\begin{questions}
+
+\question[4]
+هر یک از موارد زیر کوتاه و دقیق (فارسی یا انگلیسی) پاسخ دهید:
+\begin{parts}
+\part  مجموعه صفاتی که به طور منحصر به فرد یک تاپل را مشخص می‌کنند.
+\answerline
+
+\part توصیف انتزاعی از داده‌ها
+\answerline
+
+\end{parts}
+
+\question[2]
+درستی یا نادرستی هر یک از عبارتهای زیر را تعیین کنید :
+\begin{parts}
+\part  در هر رابطه حداکثر یک سوپر کلید وجود دارد. \TF
+\part	کلید اصلی یک سوپرکلید است. \TF
+\end{parts}
+
+
+\question[2]
+هر یک از موارد زیر کوتاه و دقیق (فارسی یا انگلیسی) پاسخ دهید: (روش دیگر برای جای پاسخ)
+\begin{parts}
+\part  مجموعه صفاتی که به طور منحصر به فرد یک تاپل را مشخص می‌کنند.
+\fillin
+
+\part توصیف انتزاعی از داده‌ها
+\fillin
+
+\end{parts}
+
+\rule{\textwidth}{1pt}	 % Draw a line
+
+\question[22]
+{\bf
+برای پرسشهای زیر، گزینه‌ درست را در پاسخ‌نامه انتخاب کنید.
+}
+
+\begin{parts}
+\renewcommand{\thepartno}{\arabic{partno}.\thequestion}
+\part
+کدام گزینه درست است؟
+\begin{choices}
+\choice	گزینه اول
+\choice گزینه دوم
+\choice 	گزینه سوم
+\choice 	گزینه چهارم
+\end{choices}
+
+\part
+سوال چند گزینه‌ای که پاسخها در یک خط هستند. \\
+\begin{oneparchoices}
+\choice اول	\choice دوم	\choice سوم	\choice چهارم
+\end{oneparchoices}
+
+\end{parts}
+
+\newpage
+
+\question
+شمای پایگاه داده‌های زیر که در آن کلیدهای اصلی دارای زیرخط هستند را در نظر بگیرید که \lsf{suppliers} جدول تامین کنندگان، \lsf{parts} جدول قطعات، و \lsf{catalogue} جدول کاتالوگ قطعات که چه تامین کننده ای چه قطعه ای را با چه قیمتی تامین می‌کند:
+\begin{latin}
+\begin{sffamily}
+
+suppliers (\underline{sid}, sname, saddress) \\
+parts (\underline{pid}, pname, pcolor)  \\
+catalogue (\underline{sid}, \underline{pid}, cost) 
+
+\end{sffamily}
+\end{latin}
+برای هر یک از موارد زیر یک عبارت پرس‌وجو در زبان \lr{SQL} بنویسید:
+\begin{parts}
+\part[10]
+اسامی تامین کنندگانی که قطعه به شماره \textsf{p1} را تأمین می‌کنند.
+\begin{latin}
+
+\begin{solutionorbox}[\stretch{1}]
+\begin{lstlisting}
+select  sname
+from suppliers as S, catalogue as C
+where   S.sid = C.sid and  
+               C.pid = 'p1';
+
+select  sname
+from suppliers as S natural join  catalogue as C
+where   C.pid = 'p1';
+
+\end{lstlisting}
+\end{solutionorbox}
+\end{latin}
+
+
+\part[10]
+اسامی آن دسته از تأمین کنندگانی را که قطعه‌ای با رنگ قرمز تأمین می‌کنند.
+
+\begin{latin}
+
+\begin{solutionorbox}[\stretch{1}]
+
+\begin{lstlisting}
+select sname
+from suppliers as S, catalogue as C, parts as P
+where 
+	S.sid = C.sid and
+	C.pid = P.pid and
+	P.pcolor = 'red';
+
+\end{lstlisting}
+\end{solutionorbox}
+\end{latin}
+
+
+\part[10]
+اسامی تأمین کنندگانی که ارزانترین قیمت را برای قطعه شماره \textsf{p1} ارائه می دهند.
+
+\begin{latin}
+
+\begin{solutionorbox}[\stretch{1}]
+
+\begin{lstlisting}
+Select sname
+from suppliers as S, catalogue as C, 
+where  S.sid = C.sid
+    	  and C.pid = 'p1'
+          and C.cost = (
+              		select MIN(cost)
+              		from Catalogue  as T
+               		where T.pid = "p1");
+
+\end{lstlisting}
+\end{solutionorbox}
+\end{latin}
+
+
+\newpage
+
+
+\part[10]
+اسامی آن دسته از قطعاتی که توسط همه تأمین کنندگان تأمین می‌شوند.
+
+راهنمایی: با توجه به این که در SQL  سور عمومی یا \lr{(For all) $\forall$}  مستقیم پشتیبانی نمی شود، باید از معادل آن به صورت دو بار منفی سور وجودی استفاده کرد.
+به عبارت دیگر پرس و جوی بالا را به این صورت معادل می نویسیم:
+
+هر قطعه‌ای که تأمین کننده‌ای وجود ندارد که آن قطعه را تأمین نکند.
+ 
+% $\forall pid \in Parts, \nexists sid \in Suppliers, (sid, pid) \notin Catalogue $
+
+\begin{latin}
+
+\begin{solutionorbox}[\stretch{1}]
+
+در SQL معادل عبارت بالا را به هر دو صورت زیر می‌توان نوشت:
+$\forall pid \in Parts, \nexists sid \in Suppliers, (sid, pid) \notin Catalogue $
+\begin{lstlisting}
+select distinct P.pname
+from parts as P
+where not exists 
+	(select *
+  	from suppliers as S 
+  	where not exists
+  			(select *
+  	 		from catalogue as C
+	 		where (S.sid, P.pid) = (C.sid, C.pid));
+
+select distinct P.pname
+from parts as P
+where not exists 
+	(select *
+  	from suppliers as S 
+  	where (S.sid, P.pid) not in
+  			(select sid, pid
+  	 		from catalogue);
+
+\end{lstlisting}
+\end{solutionorbox}
+\end{latin}
+
+\newpage
+
+\part[10]
+اسامی تمامی تأمین کنندگان شهر تبریز که قطعاتی با رنگ قرمز یا سبز تأمین می‌کنند.
+
+
+\begin{latin}
+
+\begin{solutionorbox}[\stretch{1}]
+\begin{lstlisting}
+select sname
+from suppliers as S, catalogue as C, parts as P
+where 
+	S.sid = C.sid and
+	S.saddress = 'Tabriz' and
+	C.pid = P.pid and
+	(P.pcolor = 'red' or P.pcolor='green');
+
+\end{lstlisting}
+
+\end{solutionorbox}
+\end{latin}
+%\newpage
+\part[10]
+اسامی همه تأمین‌کنندگانی که فقط قطعات با رنگ آبی را تأمین می‌کنند.
+راهنمایی: به این صورت معادل در نظر بگیرید: همه تأمین کنندگانی که قطعه غیر آبی تأمین نمی‌کنند.
+\begin{latin}
+
+\begin{solutionorbox}[\stretch{1}]
+\begin{lstlisting}
+select sname
+from suppliers as S
+where not exists 
+	(select *
+	from catalogue as C, parts as P
+	S.sid = C.sid and
+	C.pid = P.pid and
+	P.pcolor  != 'blue');
+
+\end{lstlisting}
+\end{solutionorbox}
+\end{latin}
+
+
+
+\part[10]
+قیمت همه قطعات که تأمین کننده آنها در شهر تهران است را 10 درصد افزایش دهید.
+\begin{latin}
+
+\begin{solutionorbox}[\stretch{1}]
+\begin{lstlisting}
+
+update Catalogue
+set cost = cost * 1.1
+where sid in 
+        (select sid
+		from Suppliers
+		where saddress = 'Tehran');
+
+\end{lstlisting}
+
+\end{solutionorbox}
+\end{latin}
+
+
+
+\end{parts}
+
+\hide{
+
+\question
+برای پایگاه داده پرسش قبل، پرس و جوهای خواسته شده را با حساب رابطه ای (تاپلی یا دامنه‌ای) بنویسید.
+\begin{parts}
+\part[10]
+اسامی آن دسته از قطعاتی که توسط تمامی تأمین کنندگان تأمین می‌شوند (حساب رابطه ای).
+\makeemptybox{\stretch{1}}
+
+\part[10]
+اسامی آن دسته از تأمین کنندگانی را که قطعات با رنگ قرمز تأمین می‌کنند (حساب رابطه ای).
+\makeemptybox{\stretch{1}}
+
+\end{parts}
+
+\question
+شمای پایگاه داده‌های زیر که در آن کلیدهای اصلی دارای زیرخط هستند را در نظر بگیرید:  
+\begin{latin}
+\begin{sffamily}
+
+employee (\underline{employee\_name}, street, city)\\
+works (\underline{employee\_name}, \underline{company\_name}, salary)\\
+company (\underline{company\_name}, city)\\
+manages (\underline{employee\_name}, manager\_name)
+
+\end{sffamily}
+\end{latin}
+برای هر یک از موارد زیر یک عبارت پرس‌وجو در زبان \lr{SQL} بنویسید:
+\begin{parts}
+%\part[10]
+%دستورات \lr{SQL} لازم برای ایجاد این پایگاه داده‌ها را بنویسید.
+%\makeemptybox{\stretch{1}}
+\part[10]
+پایگاه داده را به گونه‌ای ویرایش کنید که تغییر مکان آقای رضایی به شهر ارومیه را  منعکس کند.
+\makeemptybox{\stretch{1}}
+\newpage
+\part[10]
+از حقوق تمامی مدیران شرکت {رصد} به میزان 10\% کم کنید.
+\makeemptybox{\stretch{1}}
+
+\part[10]
+اسامی تمامی کارمندانی را لیست کنید که در همان شهر و خیابانی که مدیر آن‌ها در آن ساکن است، ساکن هستند.
+\makeemptybox{\stretch{1}}
+
+\part[10]
+اسامی تمامی کارمندانی را که حقوقی بیشتر از میانگین حقوق تمامی کارمندان شرکتشان دریافت می‌کنند.
+\makeemptybox{\stretch{1}}
+\part[10]
+اسامی مدیرانی که کمترین حقوق را در بین سایر مدیران دریافت می‌کنند.
+\makeemptybox{\stretch{1}}
+\end{parts}
+} %hide
+
+\end{questions}
+
+\end{document}
